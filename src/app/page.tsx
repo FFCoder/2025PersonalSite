@@ -1,101 +1,122 @@
-import Image from "next/image";
+'use client';
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-4 sm:p-8">
+      <main className="max-w-4xl mx-auto">
+        <div className="border border-zinc-800 rounded-lg overflow-hidden">
+          {/* Main content area */}
+          <div className="p-6 font-mono">
+            <div className="mb-8">
+              <span className="text-green-400">$</span>
+              <span className="text-blue-500"> whoami</span>
+              <h1 className="mt-2 text-2xl font-bold text-zinc-100">
+                Jonathon Chambers
+              </h1>
+              <h2 className="mt-1 text-xl text-zinc-400">
+                Full-Stack Software Developer
+              </h2>
+              <p className="mt-2 text-zinc-400 leading-relaxed">
+                Specialized in Golang and Node.js, with a passion for establishing team standards 
+                and optimizing development pipelines. AWS Certified Developer focusing on 
+                code quality, testing, and reliable backend solutions.
+              </p>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Tech Stack */}
+            <div className="mb-8">
+              <span className="text-green-400">$</span>
+              <span className="text-blue-500"> tech --list</span>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {['Golang', 'Node.js', 'Docker', 'AWS', 'MongoDB', 'Redis', 'CI/CD', 'Python'].map((tech) => (
+                  <span key={tech} className="px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="space-y-4">
+              <Link 
+                href="/projects" 
+                className="block p-4 border border-zinc-800 rounded-lg hover:bg-zinc-900 transition-colors"
+              >
+                <span className="text-green-400">~/</span>
+                <span className="text-blue-500">projects</span>
+                <p className="mt-1 text-sm text-zinc-400">
+                  Backend services, DevOps improvements, and testing implementations →
+                </p>
+              </Link>
+
+              <Link 
+                href="/experience" 
+                className="block p-4 border border-zinc-800 rounded-lg hover:bg-zinc-900 transition-colors"
+              >
+                <span className="text-green-400">~/</span>
+                <span className="text-blue-500">experience</span>
+                <p className="mt-1 text-sm text-zinc-400">
+                  Audio Enhancement, Griffin Spalding County Schools →
+                </p>
+              </Link>
+
+              <Link 
+                href="/blog" 
+                className="block p-4 border border-zinc-800 rounded-lg hover:bg-zinc-900 transition-colors"
+              >
+                <span className="text-green-400">~/</span>
+                <span className="text-blue-500">blog</span>
+                <p className="mt-1 text-sm text-zinc-400">
+                  Thoughts on backend development, testing, and DevOps →
+                </p>
+              </Link>
+            </div>
+
+            {/* Current Role Banner */}
+            <div className="mt-8 border border-zinc-800 rounded-lg p-4 bg-zinc-900/50">
+              <p className="text-sm text-zinc-400">
+                <span className="text-green-400">Currently:</span> Software Developer at{" "}
+                <a 
+                  href="https://audioenhancement.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-zinc-100 transition-colors"
+                >
+                  Audio Enhancement <span className="inline-block ml-0.5">↗</span>
+                </a>
+              </p>
+            </div>
+
+            {/* Social links */}
+            <div className="mt-8 flex justify-center gap-6 text-zinc-400">
+              <a 
+                href="https://github.com/FFCoder" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-zinc-100 transition-colors"
+              >
+                GitHub
+              </a>
+              <a 
+                href="https://linkedin.com/in/jonathon-chambers-65935674" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-zinc-100 transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="/resume" 
+                className="hover:text-zinc-100 transition-colors"
+              >
+                Resume
+              </a>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
