@@ -19,8 +19,9 @@ export default function Experience() {
           </div>
           <div className="text-sm text-zinc-400 mb-4">Feb 2022 - Present</div>
           <ul className="space-y-2 text-zinc-400 text-sm list-inside">
-            <li>• Developed and maintained backend services in Golang and JavaScript, contributing to classroom audio solutions</li>
+            <li>• Develop and maintain backend services in Golang and JavaScript, contributing to classroom audio solutions, cloud infrastructure, and CI/CD pipelines</li>
             <li>• Initiated team standards for unit and E2E tests, significantly improving code quality</li>
+            <li>• Led a QA team of 3 to implement and maintain testing strategies</li>
             <li>• Established and optimized devops pipeline with Docker and Bitbucket Pipelines</li>
             <li>• Spearheaded best practices for code commenting and documentation</li>
           </ul>
@@ -29,6 +30,7 @@ export default function Experience() {
             <span className="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 rounded">JavaScript</span>
             <span className="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 rounded">Docker</span>
             <span className="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 rounded">CI/CD</span>
+            <span className="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 rounded">Linux</span>
           </div>
         </div>
       </div>
@@ -76,7 +78,7 @@ export default function Experience() {
       </div>
 
       {/* Education & Certification */}
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <div className="mb-4">
           <span className="text-green-400">$</span>
           <span className="text-blue-500"> cat certifications.md</span>
@@ -90,7 +92,7 @@ export default function Experience() {
             Relevant Coursework: Computer Science, Networking, Software Engineering
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 } 

@@ -20,7 +20,7 @@ export default function Home() {
               </h2>
               <p className="mt-2 text-zinc-400 leading-relaxed">
                 Specialized in Golang and Node.js, with a passion for establishing team standards 
-                and optimizing development pipelines. AWS Certified Developer focusing on 
+                and optimizing development pipelines. Full-Stack Developer focusing on 
                 code quality, testing, and reliable backend solutions.
               </p>
             </div>
@@ -58,11 +58,11 @@ export default function Home() {
                 <span className="text-green-400">~/</span>
                 <span className="text-blue-500">experience</span>
                 <p className="mt-1 text-sm text-zinc-400">
-                  Audio Enhancement, Griffin Spalding County Schools →
+                  Audio Enhancement, Griffin-Spalding County Schools →
                 </p>
               </Link>
 
-              <Link 
+              {/* <Link 
                 href="/blog" 
                 className="block p-4 border border-zinc-800 rounded-lg hover:bg-zinc-900 transition-colors"
               >
@@ -71,7 +71,7 @@ export default function Home() {
                 <p className="mt-1 text-sm text-zinc-400">
                   Thoughts on backend development, testing, and DevOps →
                 </p>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Current Role Banner */}

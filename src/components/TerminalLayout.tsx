@@ -29,7 +29,7 @@ export default function TerminalLayout({
             <div className="flex-1 flex justify-center gap-6 text-sm text-zinc-400 font-mono">
               <Link href="/" className="hover:text-zinc-100 transition-colors">~</Link>
               <Link href="/projects" className="hover:text-zinc-100 transition-colors">projects</Link>
-              <Link href="/blog" className="hover:text-zinc-100 transition-colors">blog</Link>
+              {/* <Link href="/blog" className="hover:text-zinc-100 transition-colors">blog</Link> */}
               <Link href="/experience" className="hover:text-zinc-100 transition-colors">experience</Link>
             </div>
           </div>
